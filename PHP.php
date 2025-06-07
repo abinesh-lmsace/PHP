@@ -160,7 +160,7 @@ echo $fruit["gen"]; #Associative Arrays are having different index like string o
     function arrfun(){#function inside array
         echo "Welcom to array function";
     }
-    $arr = array(1, 2, arrfun());   #or     #$arr = array(1, 2, arrfun());      #or         $arr = array(1, 2, "fun"=>arrfun());
+    $arr = array(1, 2, arrfun);     #or     #$arr = array(1, 2, arrfun());      #or         $arr = array(1, 2, "fun"=>arrfun());
     echo $arr[2]();                 #or     #$arr[2];                           #or         $arr["fun"];
     
     unset($fruit[0]);
@@ -225,54 +225,3 @@ ________________________________________________________________________________
     }
 
 ?> 
-____________________________________________________________________________________________________________________________
-Data transfer from file to file by using
-1.get - form method=get $GET[''], href a tag link is used to sent and receive data
-2.post - form method=post $_POST['']used to sent and receive data
-3.request - $REQUEST[''] used for get the data
-4.cookie - data store in local browser
-5.session - data stoe in server
-6.DB - data store in db
-7.files.txt - data store in any type of file then get the data from that file
-8.API - data stored in Google drive, Dropbox, Cloud
-____________________________________________________________________________________________________________________________
-
-<?php
-/*
-cookie - data store in local browser
-Must be set before any output (headers)
-When you use PHP functions like:
-
-setcookie()
-header("Location: ...")
-session_start()
-
-They send HTTP headers to the browser. But headers must be sent before any content (HTML, echo, etc.) is printed to the browser — otherwise, PHP will throw an error.
-
-What is a header?
-When the browser contacts a PHP server, PHP sends:
-HTTP headers (metadata: cookies, content-type, etc.)
-Then the HTML page content
-Once PHP sends even one line of HTML, it can’t go back and send headers.
-*/
-?>
-____________________________________________________________________________________________________________________________
-<?php
-/* Abstract class and methods
-we can define the abstract method and normal method inside the abstract class
-we can set the properities inside the abstract class
-we can not create a object for abstract class but can create the object for its child class
-we can create multiple abstract methods inside abstract class but we need to define all abstract methods to the abstract classes->child class 
-we can not set the multiple abstract class to one child class like [class c extends a, b] is wrong we can set single abstract class to the child class like [class c extends a]
-*/?>
-____________________________________________________________________________________________________________________________
-<?php
-/*interface
-we can create interface like = interface car{ }
-before PHP 8.0 we can define the method inside the interfaces
-before PHP 8.1 we can set the properities inside the interfaces
-we can not create a object for interfaces but can create the object for its child class
-we can create multiple methods inside the interfaces we need to define all its methods to the interfaces->child class 
-we can set the multiple interfaces to one child class like [class c extends a, b] it works in interfaces
-*/?>
-____________________________________________________________________________________________________________________________
